@@ -25,7 +25,6 @@ const App = () => {
 
     socket.on("connect", () => {
       socket.on("tweets", (data) => {
-        console.log(data)
         settweets([...tweets, data]);
         setCount(count + 1);
       });
