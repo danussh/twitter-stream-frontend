@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
 Hosted URL: https://elegant-mestorf-d6b00d.netlify.app/
+
+- The UI contains a search box to let users search for a keyword. When the user presses the search button, the UI should display a maximum of 25 tweets at a time using the Twitter streaming API
+- The UI also contains a notification icon (at the top) to inform users of the count of newly arrived tweets matching the keyword i.e., as new tweets arrive matching the keyword, the user should be notified of the count in real-time via the notification icon
+- In addition, implement a "Load More" functionality to allow users to view new unread tweets in an event driven fashion (look at Twitter search interface for inspiration). As soon as the user clicks on "Load More" the user should see the newly arrived batch of tweets in the UI
+- Implemented The functionality to like the Posts
 ![image](https://user-images.githubusercontent.com/72194821/137589430-2b2c86bf-1388-453a-9870-18d8ef14ad66.png)
 
 
