@@ -81,16 +81,17 @@ const MenuBar = ({ count }) => {
   };
 
   const searchTweets = (event) => {
+    // Test in Server: https://twitter-api-stream.herokuapp.com/
+    // Test in Local : http://localhost:3001/
     if (event.key === "Enter") {
       let term = searchTerm;
       console.log(term);
       axios
-        .post("http://localhost:3001/setSearchTerm", {
-          term:term
+        .post("https://twitter-api-stream.herokuapp.com/setSearchTerm", {
+          term: term,
         })
-        .then(() => console.log('search sucess'))
+        .then(() => console.log("search sucess"))
         .catch((err) => console.log(err));
-
     }
   };
 

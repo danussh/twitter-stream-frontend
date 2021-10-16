@@ -21,8 +21,9 @@ const App = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    const socket = socketIOClient("http://localhost:3001/");
-
+    const socket = socketIOClient("https://twitter-api-stream.herokuapp.com/");
+    // Test in Server: https://twitter-api-stream.herokuapp.com/
+    // Test in Local : http://localhost:3001/
     socket.on("connect", () => {
       socket.on("tweets", (data) => {
         settweets([...tweets, data]);
@@ -39,7 +40,7 @@ const App = () => {
   const handleShowMore = () => {
     setLoad((load) => load + 10);
   };
-  
+
   return (
     <div>
       <MenuBar count={count} />

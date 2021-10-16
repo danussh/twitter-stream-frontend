@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Card from "@material-ui/core/Card";
@@ -38,10 +38,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Tweets({ tweets }) {
-
-  const [likes,setLikes]=useState(0)
+  const [likes, setLikes] = useState(0);
   const classes = useStyles();
-  
+
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -59,7 +58,10 @@ export default function Tweets({ tweets }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites" onClick={()=>setLikes(likes+1)}>
+        <IconButton
+          aria-label="add to favorites"
+          onClick={() => setLikes(likes + 1)}
+        >
           <FavoriteIcon style={{ color: "red" }} />
           <span>{tweets.user.friends_count + likes}</span>
         </IconButton>
